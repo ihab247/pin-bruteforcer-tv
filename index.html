@@ -3,6 +3,7 @@
         function thing() {
             console.log("hello");
         }
+        
         async function start() {
             const numbers = Array();
             numbers[0] = '0000 006C 0022 0003 00AB 00AA 0015 003F 0015 003F 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 0040 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 0015 0015 0015 0015 0015 0015 003F 0015 0015 0015 0015 0015 0015 0015 0016 0015 003F 0015 003F 0015 003F 0015 0015 0015 0040 0015 003F 0015 003F 0015 0713 00AB 00AA 0015 0015 0015 0E91';
@@ -16,19 +17,16 @@
             numbers[8] = '0000 006D 0022 0003 00A9 00A8 0015 003F 0015 003F 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 003F 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 0015 0015 003F 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 0015 0015 0015 0015 003F 0015 003F 0015 003F 0015 003F 0015 0703 00A9 00A8 0015 0015 0015 0E6E';
             numbers[9] = '0000 006D 0022 0003 00A9 00A8 0015 003F 0015 003F 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 003F 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 003F 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 0015 0015 0015 0015 0015 0015 003F 0015 003F 0015 003F 0015 003F 0015 0703 00A9 00A8 0015 0015 0015 0E6E';
             
-            var first = Array();
-            var second = Array();
-            var third = Array();
-            var fourth = Array();
-            
+            var interact = Array();
+
             for (var i = 0; i < 10; i++) {
                 for (var j = 0; j < 10; j++) {
                     for (var k = 0; k < 10; k++) {
                         for (var l = 0; l < 10; l++) {
-                            first.push(i);
-                            second.push(j);
-                            third.push(k);
-                            fourth.push(l);
+                            interact.push(i);
+                            interact.push(j);
+                            interact.push(k);
+                            interact.push(l);
                         }
                     }       
                 }
@@ -36,12 +34,10 @@
 
             var i = 0;
             setInterval(function() {
-                transmit(numbers[first[i]]);
-                transmit(numbers[second[i]]);
-                transmit(numbers[third[i]]);
-                transmit(numbers[fourth[i]]);
+                // console.log(interact[i]);
+                transmit(interact[i]);
                 i++;
-            }, 3000)
+            }, 1000)
         }
 
     </script>
